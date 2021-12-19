@@ -69,7 +69,7 @@ std::shared_ptr<Object> EvaluateExpression(std::shared_ptr<Object> expression,
     }
     if (BeginsWith(cell, "+")) {
       auto numbers = GetIntegers(cell, scope);
-      int64_t result = std::accumulate(numbers.begin(), numbers.end(), 0, std::plus());
+      int64_t result = std::accumulate(numbers.begin(), numbers.end(), 0ll, std::plus());
       return std::make_shared<Number>(result);
     }
     if (BeginsWith(cell, "-")) {
@@ -83,7 +83,7 @@ std::shared_ptr<Object> EvaluateExpression(std::shared_ptr<Object> expression,
     }
     if (BeginsWith(cell, "*")) {
       auto numbers = GetIntegers(cell, scope);
-      int64_t result = std::accumulate(numbers.begin(), numbers.end(), 1, std::multiplies());
+      int64_t result = std::accumulate(numbers.begin(), numbers.end(), 1ll, std::multiplies());
       return std::make_shared<Number>(result);
     }
     if (BeginsWith(cell, "/")) {

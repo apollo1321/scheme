@@ -1,5 +1,5 @@
 #include <common.h>
-#include <error.h>
+#include <scheme_error.h>
 #include <object.h>
 
 std::vector<std::shared_ptr<Object>> ListToVector(std::shared_ptr<Object> object) {
