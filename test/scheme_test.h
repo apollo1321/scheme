@@ -12,7 +12,6 @@ struct SchemeTest {
   SchemeTest() : global_scope(CreateScope()) {
   }
 
-  // Implement following methods.
   void ExpectEq(std::string expression, std::string result) {
     REQUIRE(Interpret(expression, global_scope) == result);
   }

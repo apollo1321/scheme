@@ -14,6 +14,7 @@
 #include <scheme_error.h>
 #include <symbol.h>
 
+// TODO: Remove the implementation of operators from the function
 std::shared_ptr<Object> EvaluateExpression(std::shared_ptr<Object> expression,
                                            std::shared_ptr<Scope> scope) {
   if (Is<Number>(expression) || Is<Bool>(expression)) {
